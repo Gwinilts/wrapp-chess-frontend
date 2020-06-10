@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ws test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="http://127.0.0.1:8080/lib"></script>
+		<script type="text/javascript" src="http://127.0.0.1:8080/script"></script>
+		<!--link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"-->
+		<link rel='stylesheet' href='http://127.0.0.1:8080/style'/>
+	</head>
+	<body>
+		<nav>
+			<a id='barTitle'>wrapp</a>
+		</nav>
+		<main>
+			<section class='home-section'>
+				<p>To play a game, enter your name, then hit 'Start' to enter the lobby.</p>
+				<input class='field-input' type='text' id='user-name'/>
+				<input class='btn' type='button' value='Start' id='start-game' data-btn='true'>
+				<input class='btn' type='button' value='Derbug' id='debug' data-btn='true'>
+				<p class='error'></p>
+			</section>
+			<section class='lobby-section' data-hidden="true">
+				<p>This is the lobby section. To challange another player, tap their name in the list then press 'Challange'</p>
+				<div class='list' id='user-list'>
+
+				</div>
+				<input class='btn' type='button' value='Challange' id='challange' data-btn='true'/>
+			</section>
+			<section class='waiting-section' data-hidden="true">
+				<p><a id='challanger'>A PLAYER</a> has challanged you to a match. <hr>To accept, pick a side and hit accept, otherwise click deny to go back to the lobby screen.</p>
+				<hr>
+				<label for="black-side">black</label>
+				<input type='radio' id='black-side' name='match-side' value='black' checked="true"><br>
+				<label for='white-side'>white</label>
+				<input type='radio' id='white-side' name='match-side' value='white'>
+				<hr>
+				<input class='btn' type='button' value='Accept' id='accept-game' data-btn='true'>
+				<input class='btn' type='button' value='Deny' id='deny-game' data-btn='true'>
+			</section>
+			<section class='board-section' data-hidden='true'>
+				<div data-info="the opponent's lost peices etc" class='enemy'>
+					
+				</div>
+				<div data-info='the board' class='board'>
+					<canvas id='chess-board'/>
+				</div>
+				<div data-info="the player's lost peices etc" class='player'>
+
+				</div>
+			</section>
+		</main>
+		<script>
+			_main();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+protocol verbs:
+
+0x00 - 0x0F : networklayer (poke, invite, join, etc)
+0x10 - 0x2F : reserved for ws->sys layer (rsc, etc)
+0xA0 - 0XBF : usable by top-layer (the game)

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  min-height: 56px;
+  border-bottom: 1px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+nav > a#barTitle {
+  padding-left: 16px;
+  padding-right: 16px;
+  line-height: 10px;
+}
+
+main {
+  flex-grow: 1;
+  height: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+section.board-section {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+section > .enemy, section .player {
+  flex-grow: 1;
+}
+
+.enemy, .player {
+  width: 100%;
+}
+
+section > .board {
+  flex-shrink: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+section > .board > #chess-board {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+[data-hidden] {
+  display: none !important;
+}
+
+
+.field-input {
+  padding: 0.3em;
+  width: 95%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  padding: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  background: #4982de;
+  margin-bottom: 1.5em;
+}
+
+.list {
+  border: 1px solid #5f6163;
+  background: #abafb3;
+  min-height: 10em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+section {
+  box-sizing: content-box;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+}
+
+section.lobby-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.lobby-section * {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.lobby-section #user-list {
+  flex-grow: 1;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.list .list-item {
+  border-bottom: 1px solid #818c96;
+  background: #e4e9ed;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  padding-left: 0.1em;
+  height: 1.2em;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+hr {
+  height: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.list .list-item[data-selected] {
+  background: #484a4d;
+  color: #e8eaed;
+}
