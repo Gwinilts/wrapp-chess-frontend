@@ -65,7 +65,6 @@ function _onMsg(e) {
     _json_msg_handlers[obj.type](obj);
   } else {
     if (e.data instanceof Blob) {
-      console.log("was a blob");
       e.data.arrayBuffer().then(buffer => _onMsg({data: buffer}));
       return;
     }

@@ -61,7 +61,6 @@ addRawMsgHandler(game_msgs.suggest, function (data) {
     }
   }
 
-  console.log(data);
   var obj;
   for (var i = 1; i < data.length; i++) {
     obj = get(data[i]);
@@ -85,7 +84,6 @@ addRawMsgHandler(game_msgs.challange, function (data) {
 });
 
 addRawMsgHandler(game_msgs.draw, function (data) {
-  console.log(data);
   var count = data[1];
   var get = function (a, b) {
     return {
